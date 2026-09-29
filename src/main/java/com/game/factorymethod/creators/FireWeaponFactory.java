@@ -1,4 +1,11 @@
 package com.game.factorymethod.creators;
 
-public class FireWeaponFactory {
+import com.game.factorymethod.products.FireWeapon;
+import com.game.factorymethod.products.Weapon;
+
+public class FireWeaponFactory extends WeaponFactory {
+    @Override
+    public Weapon createWeapon() {
+        return new FireWeapon();
+    }
 }
