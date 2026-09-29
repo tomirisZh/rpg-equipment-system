@@ -4,6 +4,7 @@ import com.game.abstractfactory.factories.EquipmentFactory;
 import com.game.abstractfactory.factories.FireEquipmentFactory;
 import com.game.abstractfactory.factories.IceEquipmentFactory;
 import com.game.abstractfactory.factories.ShadowEquipmentFactory;
+import com.game.abstractfactory.factories.LightEquipmentFactory;
 
 public class EquipmentProvider {
     public static EquipmentFactory getFactory(String elementType) {
@@ -12,6 +13,8 @@ public class EquipmentProvider {
         }
 
         switch (elementType.trim().toLowerCase()) {
+            case "light":
+                return new LightEquipmentFactory();
             case "fire":
                 return new FireEquipmentFactory();
             case "ice":
